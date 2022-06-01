@@ -1,0 +1,111 @@
+
+.wrapper_faq {
+    overflow-x: hidden;
+
+}
+
+.faq__header{
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 30px;
+    & .faq__title{
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+    }
+}
+
+.faq__subtitle{
+    position: relative;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    & h2 {
+        margin-left: 15px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+.subscription{
+    position: relative;
+    z-index: 9;
+    margin-bottom: 50px;
+
+}
+.subscription__body{
+    position: relative;
+    z-index: 9;
+    box-shadow: 0 5px 5px 0 gray;
+    border-radius: 20px;
+    margin-top: 30px;
+    
+    & .subscription__item{
+        position: relative;
+        z-index: 9;
+        cursor: pointer;
+        display: flex;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        border: 1px solid rgb(240, 252, 250);;
+        background-color:  #e1f4fc;
+        & .add__icon{
+           margin-left: auto;
+        }
+        & .subscription__question{
+            position: relative;
+            z-index: 99;
+        }
+    }
+    & div:first-child {
+        border-radius: 20px 20px 0 0;
+    } 
+    & div:last-child {
+        border-radius: 0 0 20px 20px;
+    }
+    & .subscription__answer{
+       
+        padding: 20px 30px 20px 0;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.4;
+        & ul li {
+            list-style-type: disc; 
+            margin-left: 30px;
+        }
+        & ul li:first-child{
+            margin-top: 15px;
+        }
+    }
+}
+.anim{
+    display: block;
+    position: relative;
+    animation: show .5s;
+}
+
+.material-symbols-outlined{
+    transition: all 1s;
+}
+
+@keyframes show {
+    from{top: -30px; opacity: 0;}
+    to{top: 0px; opacity: 1;}
+}
+
+
+// mobile
+
+@media (max-width:424px){
+    .faq__title{
+        font-size: 28px;
+    }
+   .subscription__question{
+       font-size: 18px;
+   }
+}
